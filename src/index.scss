@@ -1,0 +1,110 @@
+:root {
+      --primary: #1a73e8;
+      --background: #ffffff;
+      --surface: #f1f3f4;
+      --text-primary: #202124;
+      --text-secondary: #5f6368;
+    }
+
+    [data-theme="dark"] {
+      --primary: #8ab4f8;
+      --background: #202124;
+      --surface: #292a2d;
+      --text-primary: #e8eaed;
+      --text-secondary: #9aa0a6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--background);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .navbar {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 0;
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem 0;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 4rem 0;
+      background: var(--surface);
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+    }
+
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer {
+      background: var(--surface);
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: auto;
+    }
